@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_meeting"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/NAME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/schedule"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/name"/>
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NAME"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Name"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/tv_back"
+            android:padding="@dimen/dp_20"
+            android:text="@string/tue_22_december_2020"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/tv_back"
+            android:padding="@dimen/dp_20"
+            android:text="@string/_11_00_am"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/SNAME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/people_to_invite"/>
+        <EditText
+            android:id="@+id/SName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SNAME"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:text="@string/prateek"
+            />
+        <ImageView
+            android:id="@+id/jeff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jeff_bezos_1"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_toEndOf="@+id/sukla"
+            android:layout_below="@+id/SName"/>
+        <ImageView
+            android:id="@+id/sukla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_30"
+            android:src="@drawable/prateek_sukla_1"
+            android:layout_below="@+id/SName"/>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sukla"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/prateek_sukla_1"
+                android:text="@string/prateek_shukla"
+                android:gravity="center"
+                android:layout_margin="@dimen/dp_30"
+                android:drawablePadding="@dimen/dp_30"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/jeff_bezos_1"
+                android:text="@string/jeff_bezos"
+                android:gravity="center"
+                android:layout_margin="@dimen/dp_30"
+                android:drawablePadding="@dimen/dp_30"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/slack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notify_people_on_slack"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linear"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group"
+            android:layout_toEndOf="@+id/slack"
+            android:layout_below="@+id/linear"
+            android:contentDescription="@string/todo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_30"
+            android:text="@string/create_meeting"
+            android:background="#8095FF"
+            android:layout_below="@+id/slack"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
